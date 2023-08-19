@@ -1,6 +1,7 @@
 <?php
 
 echo "Meu primeiro código PHP. <strong> Olá, Mundo! </strong>";
-echo "Hello sublime"
+
+echo "Hello sublime local"
 
 ?>
