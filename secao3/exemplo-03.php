@@ -24,4 +24,11 @@
 	$arquivo = fopen("exemplo-03.php", "r");
 
 	var_dump($arquivo);
+
+	echo "<br/>";
+	echo "<br/>";
+
+	$nulo = NULL
+
+	
 ?>	
