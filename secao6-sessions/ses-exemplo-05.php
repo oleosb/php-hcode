@@ -18,9 +18,6 @@
 		case PHP_SESSION_ACTIVE:
 			echo "se as sessoes estiverem habilitadas e uma existir";
 			break;
-		default:
-			// code...
-			break;
 	};
 
 ?> 
