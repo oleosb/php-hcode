@@ -2,7 +2,6 @@
 	$conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "root123");
 
 	$stmt = $conn -> prepare("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID");
-	//$stmt = $conn -> prepare("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID");
 
 	$login = "joao";
 	$password = "qwerty";
