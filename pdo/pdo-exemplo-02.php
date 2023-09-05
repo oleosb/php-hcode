@@ -1,5 +1,5 @@
 <?php
-	$conn = new PDO("mysql:dbname=dbphp7;host=localhost", "root", "root123");
+	$conn = new PDO("sqlsrv:Database=dbphp7;server=localhost\SQLEXPRESS;ConnectionPooling=0", "sa", "root123");
 
 	$stmt = $conn->prepare("SELECT * FROM tb_usuarios ORDER BY deslogin");
 
@@ -13,6 +13,4 @@
 		}
 		echo "============================================ <br/>";
 	}
-
-	phpinfo();
 ?>
