@@ -1,26 +1,27 @@
 <?php
 
-phpinfo();
+require_once("vendor/autoload.php");
 
-/*
+$app = new \Slim\Slim();
 
-//Adicionar no https-vhosts.conf
-<VirtualHost *:80>
-    ServerAdmin webmaster@dummy-host2.example.com
-    DocumentRoot "C:/xampp/htdocs/website"
-    ServerName local.cursophp7.com.br
-    ErrorLog "logs/dummy-host2.example.com-error.log"
-    CustomLog "logs/dummy-host2.example.com-access.log" common
-    <Directory "C:/xampp/htdocs/website">
-        Order allow,deny
-        Allow from all
-        Require all granted
-    </Directory>
-</VirtualHost>
+$app->get('/', function(){
 
-//Adicionar no hosts
-127.0.0.1   local.cursophp7.com.br
+    echo "Home Page";
 
-*/
+    echo "</br>";
+
+    echo json_encode(array(
+        'date'=>date("Y-m-d H:i:s")
+    ));
+
+});
+
+$app->get('/hello/:name', function ($name) {
+
+    echo "Hello, " . $name;
+
+});
+
+$app->run();
 
 ?>
